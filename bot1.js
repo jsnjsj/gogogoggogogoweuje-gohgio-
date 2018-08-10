@@ -31,7 +31,7 @@ const sql = require("sqlite");
 ,ti={}  
 ,spee={};
 client.on("message", message => { 
-if (message.content === "-help") {
+if (message.content === "!help") {
  const embed = new Discord.RichEmbed() 
 .setColor("#ffff00") .setThumbnail(message.author.avatarURL) .setDescription(` 
   
