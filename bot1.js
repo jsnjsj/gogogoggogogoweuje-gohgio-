@@ -30,15 +30,11 @@ const sql = require("sqlite");
 
 ,ti={}  
 ,spee={};
-client.on("message", message => {
-    if (message.content === "!help") {
-        message.author.sendEmbed({
-            embed: {
-                color: 0xffff00,
-                thumbnail: {
-                    url: message.author.avatarURL
-                }
-                description: "
+client.on("message", message => { 
+if (message.content === "-help") {
+ const embed = new Discord.RichEmbed() 
+.setColor("#ffff00") .setThumbnail(message.author.avatarURL) .setDescription(` 
+  
                         ***__BOT Orders__***
 **
 『!server/يعرض لك معلومات عن السيرفر』
@@ -69,20 +65,13 @@ client.on("message", message => {
 『!ct <name> / انشاء شات』
 『!cv <name> / انشاء رووم فويس』
 『!delet <name> / مسح الشات او الرووم فويس』
-  
-                
-                
-                
-                
-                
-                
-                
-                "
-            }
-        })
+ 
+`) 
+ message.author.sendEmbed(embed) 
 
-    }
+} 
 });
+
  client.on("message", message => {
     const prefix = "!"
               
